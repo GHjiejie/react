@@ -1,20 +1,29 @@
-import { useState } from "react";
+const Button = () => {
+  return (
+    // 下面的写法实际上直接等价于<button>Click me</button>
+    <>
+      <button>Click me</button>
+    </>
+  );
+};
 
+const User = () => {
+  return (
+    <div>
+      <h1>hello</h1>
+      <h2>world</h2>
+    </div>
+  );
+};
+
+// JSX语法不支持直接返回多个元素，但是可以使用Fragment组件包裹多个元素，Fragment组件可以简写为<></>。
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1);
-  };
-
   return (
     <>
-      <div>hello</div>
-      <div>count: {count}</div>
-      <h2>使用自定义的事件实现状态的更改</h2>
-      <button onClick={handleClick}>Click me</button>
-      <h2>直接在内部实现</h2>
-      <button onClick={() => setCount(count + 1)}>Click me </button>
+      <div className="app">
+        <Button></Button>
+      </div>
+      <User></User>
     </>
   );
 }
