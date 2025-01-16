@@ -1,0 +1,33 @@
+/* User.css */
+.user {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.user h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.user h2 {
+  font-size: 20px;
+  color: #666;
+}
+
+.user button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user button:hover {
+  background-color: #0056b3;
+}
