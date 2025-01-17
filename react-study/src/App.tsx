@@ -1,53 +1,28 @@
-import { useState } from "react";
-import "./User.css";
+import React, { Suspense } from "react";
+import routes from "./router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const Button = () => {
-  return (
-    <>
-      <button>Click me</button>
-    </>
-  );
-};
-
-type UserProps = {
-  userInfo: {
-    name: string;
-    message: string;
-  };
-  onMessageChange: (newMessage: string) => void;
-};
-
-// 编写样式
-
-const User = (props: UserProps) => {
-  console.log(props);
-  const setNewMsg = () => {
-    props.onMessageChange("我是子组件传递给父组件的消息");
-  };
-
-  return (
-    <div className="user">
-      <h1>hello</h1>
-      <h2>{props.userInfo.name}</h2>
-      <button onClick={setNewMsg}>Click me</button>
-    </div>
-  );
-};
+// 一定要使用BrowserRouter组件来包裹Routes组件，这样就会有历史记录，可以通过浏览器的前进和后退按钮来切换路由。
 
 function App() {
-  const [message, setMessage] = useState<string>("hello , my name is jie!");
-
-  const handleMessageChange = (newMsg: string) => {
-    setMessage(newMsg);
-  };
   return (
-    <>
-      <User
-        userInfo={{ name: "jie", message: message }}
-        onMessageChange={handleMessageChange}
-      ></User>
-      <h2>{message}</h2>
-    </>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {routes.map((route, index) => {
+            return (
+              route.element && (
+                <Route
+                  key={index}
+                  path={route.path}
+                  element={<route.element />}
+                />
+              )
+            );
+          })}
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
