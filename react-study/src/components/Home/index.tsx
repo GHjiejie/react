@@ -14,6 +14,8 @@ const Home = () => {
       <Link to="/article">article(link)</Link>
       <h2>Navigate实现跳转(编程式导航)</h2>
       <button onClick={goArticle}>点击跳转到article页面</button>
+      <h2>用户详情页</h2>
+      <Link to="/user/1">用户1</Link>
     </div>
   );
 };
