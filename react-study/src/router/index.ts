@@ -7,8 +7,22 @@ const User = React.lazy(() => import("@/components/User"));
 const About = React.lazy(() => import("@/components/About"));
 const Email = React.lazy(() => import("@/components/About/components/email"));
 const Phone = React.lazy(() => import("@/components/About/components/phone"));
+const Hook = React.lazy(() => import("@/components/Hook"));
+const UseEffect = React.lazy(() => import("@/components/Hook/components/useEffect"));
 
 const routes = [
+  {
+    path: '/hook',
+    name: 'Hook',
+    element: Hook,  
+    children: [
+      {
+        path: 'useEffect',
+        name: 'UseEffect',
+        element: UseEffect
+      }
+    ]
+  },
   {
     path: "/",
     name: "Home",
@@ -41,6 +55,7 @@ const routes = [
       },
     ],
   },
+  
 ];
 
 export default routes;

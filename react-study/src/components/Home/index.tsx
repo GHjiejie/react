@@ -18,6 +18,8 @@ const Home = () => {
       <Link to="/user/1">用户1</Link>
       <h1>About</h1>
       <Link to="/about">关于</Link>
+
+      <Link to="/hook">各种hook的使用</Link>
     </div>
   );
 };
