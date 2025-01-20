@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import { useContext, createContext, useState } from "react";
+import "./index.css";
 // 通过使用createContext创建一个主题上下文，然后使用useContext来获取主题的值，这样就可以实现主题的切换了。
 const themeContext = createContext<string>("");
 
@@ -37,20 +38,20 @@ const Hook = () => {
   return (
     <>
       <themeContext.Provider value={theme}>
-        <h3>hooks demo</h3>
-        <Link to="useEffect">useEffect Demo</Link>
-        <div className="useContext">
-          <Link to="useContext">useContext Demo</Link>
-        </div>
         <div className="hooksDiv">
           <Outlet />
         </div>
-        <button onClick={changeTheme}>修改主题</button>
 
+        <Link to="useEffect">useEffect Demo</Link>
+
+        <Link to="useContext">useContext Demo</Link>
+
+        <button onClick={changeTheme}>修改主题</button>
         <div>
           {/* 使用组件 */}
           <UseContextDemo /> {/* Use the imported component */}
         </div>
+        <Link to="useCallback">useCallback</Link>
       </themeContext.Provider>
     </>
   );

@@ -15,6 +15,10 @@ const UseContext = React.lazy(
   () => import("@/components/Hook/components/useContext")
 );
 
+const UseCallback = React.lazy(
+  () => import("@/components/Hook/components/useCallback")
+);
+
 const routes = [
   {
     path: "/hook",
@@ -30,6 +34,11 @@ const routes = [
         path: "useContext",
         name: "UseContext",
         element: UseContext,
+      },
+      {
+        path: "useCallback",
+        name: "UseCallback",
+        element: UseCallback,
       },
     ],
   },
