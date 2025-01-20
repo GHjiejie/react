@@ -8,20 +8,30 @@ const About = React.lazy(() => import("@/components/About"));
 const Email = React.lazy(() => import("@/components/About/components/email"));
 const Phone = React.lazy(() => import("@/components/About/components/phone"));
 const Hook = React.lazy(() => import("@/components/Hook"));
-const UseEffect = React.lazy(() => import("@/components/Hook/components/useEffect"));
+const UseEffect = React.lazy(
+  () => import("@/components/Hook/components/useContext")
+);
+const UseContext = React.lazy(
+  () => import("@/components/Hook/components/useContext")
+);
 
 const routes = [
   {
-    path: '/hook',
-    name: 'Hook',
-    element: Hook,  
+    path: "/hook",
+    name: "Hook",
+    element: Hook,
     children: [
       {
-        path: 'useEffect',
-        name: 'UseEffect',
-        element: UseEffect
-      }
-    ]
+        path: "useEffect",
+        name: "UseEffect",
+        element: UseEffect,
+      },
+      {
+        path: "useContext",
+        name: "UseContext",
+        element: UseContext,
+      },
+    ],
   },
   {
     path: "/",
@@ -55,7 +65,6 @@ const routes = [
       },
     ],
   },
-  
 ];
 
 export default routes;
