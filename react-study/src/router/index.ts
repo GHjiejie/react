@@ -1,3 +1,4 @@
+import path from "path";
 import React from "react";
 
 const Home = React.lazy(() => import("@/components/Home"));
@@ -9,7 +10,7 @@ const Email = React.lazy(() => import("@/components/About/components/email"));
 const Phone = React.lazy(() => import("@/components/About/components/phone"));
 const Hook = React.lazy(() => import("@/components/Hook"));
 const UseEffect = React.lazy(
-  () => import("@/components/Hook/components/useContext")
+  () => import("@/components/Hook/components/useEffect")
 );
 const UseContext = React.lazy(
   () => import("@/components/Hook/components/useContext")
@@ -21,6 +22,14 @@ const UseCallback = React.lazy(
 
 const useImperativeHandle = React.lazy(
   () => import("@/components/Hook/components/useImperativeHandle")
+);
+
+const useActionState = React.lazy(
+  () => import("@/components/Hook/components/useActionState")
+);
+
+const useMemo = React.lazy(
+  () => import("@/components/Hook/components/useMemo")
 );
 const routes = [
   {
@@ -47,6 +56,16 @@ const routes = [
         path: "useImperativeHandle",
         name: "useImperativeHandle",
         element: useImperativeHandle,
+      },
+      {
+        path: "useActionState",
+        name: "useActionState",
+        element: useActionState,
+      },
+      {
+        path: "useMemo",
+        name: "useMemo",
+        element: useMemo,
       },
     ],
   },

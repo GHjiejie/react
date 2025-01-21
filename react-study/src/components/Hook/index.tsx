@@ -53,6 +53,8 @@ const Hook = () => {
         </div>
         <Link to="useCallback">useCallback</Link>
         <Link to="useImperativeHandle">useImperativeHandle</Link>
+        <Link to="useActionState">useActionState</Link>
+        <Link to="useMemo">useMemo</Link>
       </themeContext.Provider>
     </>
   );
