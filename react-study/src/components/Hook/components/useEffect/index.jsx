@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useEffectDemo = () => {
   // 定义状态变量
   const [count, setCount] = useState(0);
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   // 定义事件处理函数
   const changeCount = () => setCount(count + 1);
@@ -12,7 +12,7 @@ const useEffectDemo = () => {
   // 使用钩子函数
   useEffect(() => {
     const viewVar = () => {
-      console.log('count changed');
+      console.log("count changed");
     };
     viewVar();
   }, [count]);

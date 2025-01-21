@@ -52,6 +52,7 @@ const Hook = () => {
           <UseContextDemo /> {/* Use the imported component */}
         </div>
         <Link to="useCallback">useCallback</Link>
+        <Link to="useImperativeHandle">useImperativeHandle</Link>
       </themeContext.Provider>
     </>
   );

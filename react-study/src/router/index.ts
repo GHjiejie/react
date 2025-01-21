@@ -19,6 +19,9 @@ const UseCallback = React.lazy(
   () => import("@/components/Hook/components/useCallback")
 );
 
+const useImperativeHandle = React.lazy(
+  () => import("@/components/Hook/components/useImperativeHandle")
+);
 const routes = [
   {
     path: "/hook",
@@ -39,6 +42,11 @@ const routes = [
         path: "useCallback",
         name: "UseCallback",
         element: UseCallback,
+      },
+      {
+        path: "useImperativeHandle",
+        name: "useImperativeHandle",
+        element: useImperativeHandle,
       },
     ],
   },
