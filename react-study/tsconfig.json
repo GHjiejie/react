@@ -1,7 +1,9 @@
 {
   "files": [],
   "references": [
+    // 配置应用程序的编译选项
     { "path": "./tsconfig.app.json" },
+    // 配置 Node.js 的编译选项
     { "path": "./tsconfig.node.json" }
   ]
 }

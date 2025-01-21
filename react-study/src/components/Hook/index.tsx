@@ -55,6 +55,7 @@ const Hook = () => {
         <Link to="useImperativeHandle">useImperativeHandle</Link>
         <Link to="useActionState">useActionState</Link>
         <Link to="useMemo">useMemo</Link>
+        <Link to="useReducer">useReducer</Link>
       </themeContext.Provider>
     </>
   );

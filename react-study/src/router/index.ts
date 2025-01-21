@@ -1,4 +1,3 @@
-import path from "path";
 import React from "react";
 
 const Home = React.lazy(() => import("@/components/Home"));
@@ -9,6 +8,7 @@ const About = React.lazy(() => import("@/components/About"));
 const Email = React.lazy(() => import("@/components/About/components/email"));
 const Phone = React.lazy(() => import("@/components/About/components/phone"));
 const Hook = React.lazy(() => import("@/components/Hook"));
+
 const UseEffect = React.lazy(
   () => import("@/components/Hook/components/useEffect")
 );
@@ -30,6 +30,9 @@ const useActionState = React.lazy(
 
 const useMemo = React.lazy(
   () => import("@/components/Hook/components/useMemo")
+);
+const useReducer = React.lazy(
+  () => import("@/components/Hook/components/useReducer")
 );
 const routes = [
   {
@@ -66,6 +69,11 @@ const routes = [
         path: "useMemo",
         name: "useMemo",
         element: useMemo,
+      },
+      {
+        path: "useReducer",
+        name: "useReducer",
+        element: useReducer,
       },
     ],
   },
