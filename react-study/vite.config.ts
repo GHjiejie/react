@@ -5,7 +5,7 @@ import path from "path";
 import fs from "fs";
 
 // 读取文件
-fs.readFile("test.txt", (err, data) => {
+fs.readFile("test.txt", (err: string, data: any) => {
   if (err) {
     console.error("读取文件失败");
   } else {
