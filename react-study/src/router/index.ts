@@ -7,6 +7,8 @@ const User = React.lazy(() => import("@/components/User"));
 const About = React.lazy(() => import("@/components/About"));
 const Email = React.lazy(() => import("@/components/About/components/email"));
 const Phone = React.lazy(() => import("@/components/About/components/phone"));
+
+const Render = React.lazy(() => import("@/components/Rendering"));
 const Hook = React.lazy(() => import("@/components/Hook"));
 
 const UseEffect = React.lazy(
@@ -108,6 +110,11 @@ const routes = [
         element: Phone,
       },
     ],
+  },
+  {
+    path: "/render",
+    name: "Render",
+    element: Render,
   },
 ];
 

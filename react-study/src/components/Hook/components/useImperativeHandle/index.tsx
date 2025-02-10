@@ -7,6 +7,7 @@ const Parent = () => {
   const handleClick = () => {
     // 当点击按钮时，调用子组件的方法
     if (childRef.current) {
+      console.log("childRef.current:", childRef.current);
       // childRef.current.alertMessage();
       // childRef.current.sayHello();
       childRef.current.focus();

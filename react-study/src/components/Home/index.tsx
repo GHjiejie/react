@@ -20,6 +20,8 @@ const Home = () => {
       <Link to="/about">关于</Link>
 
       <Link to="/hook">各种hook的使用</Link>
+
+      <Link to="render">渲染过程</Link>
     </div>
   );
 };
