@@ -1,4 +1,5 @@
 import { NavLink, Link, useNavigate } from "react-router-dom";
+import { Button } from "antd";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <div>
       <h1>Home</h1>
+      <Button type="primary">Button</Button>
       <h2>Navlink实现跳转</h2>
       <NavLink to="/article">Article(navlink)</NavLink>
       <h2>Link实现跳转</h2>
