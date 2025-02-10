@@ -1,18 +1,24 @@
-import { useCallback, useContext } from "react";
+import React, { useState, useCallback } from "react";
+const ParentComponent = () => {
+  const [count, setCount] = useState(0);
 
-const useCallbackDemo = () => {
   const handleClick = useCallback(() => {
-    console.log("handleClick rend");
-  }, []);
-
-  console.log("Component re-rendered");
+    alert("Button clicked!");
+  }, []); // 这里依赖数组为空，所以这个函数只会在初始渲染时创建一次
 
   return (
     <div>
-      <h1>useCallback</h1>
-      <button onClick={handleClick}>useCallback</button>
+      <ChildComponent onClick={handleClick} />
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+      <p>Count: {count}</p>
     </div>
   );
 };
 
-export default useCallbackDemo;
+const ChildComponent = React.memo(({ onClick }) => {
+  console.log("Child component re-rendered");
+
+  return <button onClick={onClick}>Click me!</button>;
+});
+
+export default ParentComponent;

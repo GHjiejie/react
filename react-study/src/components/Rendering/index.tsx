@@ -21,6 +21,8 @@ const Parent = () => {
   console.log("Parent Component Rendered!");
   const [count, setCount] = useState(0);
   const [number, setNumber] = useState(0);
+  //   这个是基本数据类型，如果是由于数据类型的话，就会重新渲染，我们需要使用useMemo来进行处理
+
   console.log("count:", count);
 
   const handleClick = (type: string) => {
